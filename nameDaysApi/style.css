@@ -1,0 +1,13 @@
+main {
+  max-width: 20rem;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 1rem 0;
+}
+
+.section input,
+.section select {
+  width: 100%;
+}
