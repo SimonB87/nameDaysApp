@@ -3,43 +3,70 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
   <body>
-    <h1>Kodim.cz | JS Kurz</h1>
-    <h2>API name days</h2>
-    <p>
-      Today in the Czech Republic is the name day of
-      <strong> <span id="name"></span> </strong>
-    </p>
+    <main>
+      <h1>API name days</h1>
+      <p>
+        Today in the Czech Republic is the name day of
+        <strong> <span id="name" class="highlight hasData"></span> </strong>
+      </p>
 
-    <h2>Find a name day in a country</h2>
-    <form>
-      <div>
-        <label for="dateDay">Choose a day in a month (from 1 to 31)):</label>
-        <input type="number" id="dateDay" name="dateDay" min="1" max="31" />
-      </div>
-      <div>
-        <label for="dateMonth">Choose a month (from 1 to 12)):</label>
-        <input type="number" id="dateMonth" name="dateMonth" min="1" max="12" />
-      </div>
-      <div>
-        <label for="country">Choose a country:</label>
-        <select name="country" id="country">
-          <option value="cz">Czech republic</option>
-          <option value="sk">Slovakia</option>
-          <option value="us">United States</option>
-          <option value="gb">Great Britain</option>
-        </select>
-      </div>
-      <button onclick="getResultOfDatetimePlace;">Get result</button>
-    </form>
+      <h2>Find a name day in a country</h2>
+      <form class="form">
+        <div class="section alignCenter">
+          <label for="dateDay">Choose a day in a month (from 1 to 31)):</label
+          ><br />
+          <input
+            type="number"
+            id="dateDay"
+            name="dateDay"
+            min="1"
+            max="31"
+            value="23"
+          />
+        </div>
+        <div class="section alignCenter">
+          <label for="dateMonth">Choose a month (from 1 to 12)):</label><br />
+          <input
+            type="number"
+            id="dateMonth"
+            name="dateMonth"
+            min="1"
+            max="12"
+            value="11"
+          />
+        </div>
+        <div class="section alignCenter">
+          <label for="country">Choose a country:</label><br />
+          <select name="country" id="country" value="cz">
+            <option value="cz">Czech republic</option>
+            <option value="sk">Slovakia</option>
+            <option value="us">United States</option>
+            <option value="gb">Great Britain</option>
+          </select>
+        </div>
+        <div class="section alignCenter">
+          <p>
+            <span id="actionTrigger" class="buttonStyle pointer"
+              >Find result</span
+            >
+          </p>
+          <!--           <p>
+            <button onclick="getResultOfDatetimePlace();">Get result</button>
+          </p> -->
+        </div>
+      </form>
 
-    <p>
-      Today in the <span id="selectedCountry"></span> on the date of
-      <span id="selectedDate"></span> is the name day of
-      <strong> <span id="resultName"></span> </strong>
-    </p>
+      <p>
+        Today in the <span class="highlight" id="selectedCountry"></span> on the
+        date of <span id="selectedDate" class="highlight"></span> is the name
+        day of
+        <strong> <span id="resultName" class="highlight"></span> </strong>
+      </p>
+    </main>
     <script src="app.js"></script>
   </body>
 </html>
